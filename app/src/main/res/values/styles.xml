@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Regular -->
+    <style name="Widget.App.TextView.Regular.12" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/dm_sans_regular</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <!-- Medium -->
+    <style name="Widget.App.TextView.Medium.14" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <!-- SemiBold -->
+    <style name="Widget.App.TextView.SemiBold.14" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/dm_sans_semi_bold</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <style name="Widget.App.TextView.SemiBold.16" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/dm_sans_semi_bold</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+    <style name="Widget.App.TextView.SemiBold.18" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/dm_sans_semi_bold</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/_18sdp</item>
+    </style>
+</resources>

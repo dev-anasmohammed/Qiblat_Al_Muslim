@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#FAD69D</color>
+    <color name="secondaryColor">#E7C38A</color>
+
+    <!-- grays  -->
+    <color name="gray_100">#F7F7F7</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="ripple_transparent_color">#B3FAD69D</color>
+</resources>

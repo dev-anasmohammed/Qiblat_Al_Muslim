@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.anasmohammed.qiblatalmuslim.f02Home.presentation.view.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_qiblaMapFragment"
+            app:destination="@id/qiblaMapFragment"
+            app:enterAnim="@anim/nav_slide_in"
+            app:exitAnim="@anim/nav_fade_out"
+            app:popEnterAnim="@anim/nav_fade_in"
+            app:popExitAnim="@anim/nav_slide_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/qiblaMapFragment"
+        android:name="com.anasmohammed.qiblatalmuslim.f03QiblaMap.presentation.view.QiblaMapFragment"
+        android:label="QiblaMapFragment"
+        tools:layout="@layout/fragment_qibla_map" >
+    </fragment>
+</navigation>

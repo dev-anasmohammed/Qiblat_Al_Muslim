@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Photo Background -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_210sdp"
+        android:layout_marginTop="@dimen/_minus16sdp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/people_pray" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_210sdp"
+        android:layout_marginTop="@dimen/_minus16sdp"
+        android:alpha="0.6"
+        android:background="@drawable/bg_home_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds" />
+
+    <!-- Compass -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/map_lottie"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bg_radius_8"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/location_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/today_tv"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="compass_animation.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1" />
+
+    <!-- Today & Location -->
+    <TextView
+        android:id="@+id/today_tv"
+        style="@style/Widget.App.TextView.SemiBold.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_48sdp"
+        android:text="@string/today"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/location_iv"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_location"
+        app:layout_constraintStart_toStartOf="@+id/today_tv"
+        app:layout_constraintTop_toBottomOf="@+id/today_tv"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/location_tv"
+        style="@style/Widget.App.TextView.Regular.12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_minus2sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/map_lottie"
+        app:layout_constraintStart_toEndOf="@+id/location_iv"
+        app:layout_constraintTop_toTopOf="@+id/location_iv"
+        tools:ignore="TextSizeCheck"
+        tools:text="Talkha (Egypt)" />
+
+    <!-- Next Prayer & CountDown -->
+    <TextView
+        android:id="@+id/next_prayer_title_tv"
+        style="@style/Widget.App.TextView.Regular.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_48sdp"
+        android:text="@string/next_prayer"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/location_iv"
+        app:layout_constraintTop_toBottomOf="@+id/location_iv"
+        tools:ignore="TextSizeCheck"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/count_down_tv"
+        style="@style/Widget.App.TextView.SemiBold.18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_28sdp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/location_iv"
+        app:layout_constraintTop_toBottomOf="@+id/next_prayer_title_tv"
+        tools:ignore="TextContrastCheck"
+        tools:text="12:53" />
+
+    <TextView
+        android:id="@+id/next_prayer_name_tv"
+        style="@style/Widget.App.TextView.SemiBold.18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        tools:visibility="visible"
+        android:textSize="@dimen/_28sdp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/location_iv"
+        app:layout_constraintTop_toBottomOf="@+id/next_prayer_title_tv"
+        tools:ignore="TextContrastCheck"
+        tools:text="Asr" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_92sdp"
+        android:layout_marginBottom="@dimen/_minus2sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_door"
+        app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+    <!-- Date Picker -->
+    <ImageView
+        android:id="@+id/arrow_next"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_minus2sdp"
+        android:contentDescription="@null"
+        android:paddingVertical="@dimen/_4sdp"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_minus2sdp"
+        android:contentDescription="@null"
+        android:paddingVertical="@dimen/_4sdp"
+        android:rotation="180"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/current_month_tv"
+        style="@style/Widget.App.TextView.SemiBold.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/arrow_back"
+        app:layout_constraintEnd_toStartOf="@id/arrow_next"
+        app:layout_constraintStart_toEndOf="@id/arrow_back"
+        app:layout_constraintTop_toTopOf="@id/arrow_next"
+        tools:ignore="TextSizeCheck"
+        tools:text="September 2024" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/days_rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_animation"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_24sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_month_tv"
+        tools:listitem="@layout/item_day" />
+
+    <!-- PrayerTimes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/prayer_times_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="@color/primaryColor"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_animation"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_16sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_rv"
+        tools:listitem="@layout/item_prayer_time" />
+
+    <!-- Loading -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/prayer_times_loading_lottie"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_52sdp"
+        android:layout_marginTop="@dimen/_48sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_rv"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/black"
+        app:lottie_fileName="loading_animation.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+</androidx.constraintlayout.widget.ConstraintLayout>

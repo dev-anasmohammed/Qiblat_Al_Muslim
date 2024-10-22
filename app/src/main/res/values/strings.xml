@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Qiblat Al-Muslim</string>
+
+    <!-- HomeFragment -->
+    <string name="today">Today</string>
+    <string name="next_prayer">Next Prayer</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="location_permission_settings">Forsa need location permission.\nPlease go to Permissions > Location > Allow</string>
+    <string name="failed_to_get_prayer_times_please_try_again_later">Failed to get prayer times please try again later</string>
+
+    <!-- QiblaMapFragment -->
+    <string name="kaaba">Kaaba</string>
+    <string name="mecca_saudi_arabia">Mecca , Saudi Arabia</string>
+
+</resources>
