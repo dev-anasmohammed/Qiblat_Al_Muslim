@@ -27,6 +27,7 @@ roomVersion = "2.6.1"
 motionToastVersion = "1.4"
 dataStoreVersion = "1.1.1"
 permissionXVersion = "1.7.1"
+secretsGradlePluginVersion = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -70,6 +71,7 @@ intuit = { module = "com.intuit.sdp:sdp-android", version.ref = "intuitVersion" 
 google-service-map = { module = "com.google.android.gms:play-services-maps", version.ref = "googleMapServiceVersion" }
 google-service-location = { module = "com.google.android.gms:play-services-location", version.ref = "googleLocationServiceVersion" }
 google-maps-utils = { module = "com.google.maps.android:android-maps-utils", version.ref = "googleMapUtilsVersion" }
+secrets-gradle-plugin = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "secretsGradlePluginVersion" }
 
 #glide
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
